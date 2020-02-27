@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.example.gto.m2techgateway.sub_Activity.CAM_mjpg_player;
 import com.example.gto.m2techgateway.sub_Activity.Door_Control;
+import com.example.gto.m2techgateway.sub_Activity.Door_Server;
 import com.example.gto.m2techgateway.sub_Activity.Lidar_CANFD;
 import com.example.gto.m2techgateway.sub_Activity.Lidar_Server;
 import com.example.gto.m2techgateway.sub_Activity.i2c_temperature_Activity;
@@ -32,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     public static final int EXTRA_ACTIVITY_3 = 3;
     public static final int EXTRA_ACTIVITY_4 = 4;
     public static final int EXTRA_ACTIVITY_5 = 5;
-
 
     static int counter = 0;
     public Timer timer;
@@ -86,19 +86,21 @@ public class MainActivity extends AppCompatActivity {
         activity_STATE = 1;
         //i.putExtra("extra",activity_STATE + 1);
         //activity_STATE = 1;
-
     }
 
     public void onClick_btn2(View v){
         final Intent i = new Intent(this, Door_Control.class);
         startActivityForResult(i, 201);
-        activity_STATE = 2;
-        //i.putExtra("extra",activity_STATE + 2);
+
+        new Thread(new Door_Server()).start();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+        }
     }
 
     public void onClick_btn3(View v){
         final Intent i = new Intent(this, Lidar_CANFD.class);
-        //i.putExtra("gto",activity_STATE+3);
         startActivityForResult(i, 201);
 
         new Thread(new Lidar_Server()).start();
@@ -106,20 +108,11 @@ public class MainActivity extends AppCompatActivity {
             Thread.sleep(600);
         } catch (InterruptedException e) {
         }
-
-        //new Thread(new Lidar_Server()).start();
-        /* GIve the Server some time for startup */
-        /*try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-        }*/
     }
 
     public void onClick_btn4(View v){
         final Intent i = new Intent(this, i2c_temperature_Activity.class);
         startActivityForResult(i, 201);
-        activity_STATE = 4;
-        //i.putExtra("extra",activity_STATE + 4);
     }
 
     public void onClick_btn5(View v){

@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':colorseekbar'
 rootProject.name='M2TechGateWay'

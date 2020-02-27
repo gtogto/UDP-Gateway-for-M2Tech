@@ -13,7 +13,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <vn.nms.dynamic_seekbar.DynamicSeekBarView
             android:id="@+id/dynamicSeekbar"
@@ -30,7 +31,6 @@
             app:dsbv_thumbDrawable="@drawable/bmw_side"
             app:dsbv_thumbSize="200dp"
             app:dsbv_infoInitText="@string/init_info_text"/>
-
 
     </LinearLayout>
 

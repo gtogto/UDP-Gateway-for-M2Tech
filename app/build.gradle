@@ -27,4 +27,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation 'com.github.perthcpe23:mjpegviewer:1.0.7'
     implementation 'vn.nms.dseekbar:DMSeekBar:1.0.0'
+    //implementation 'com.github.rtugeek:colorseekbar:0.0.1'
+    implementation project(path: ':colorseekbar')
 }
