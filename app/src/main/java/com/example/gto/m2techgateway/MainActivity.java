@@ -13,6 +13,9 @@ import com.example.gto.m2techgateway.sub_Activity.Door_Control;
 import com.example.gto.m2techgateway.sub_Activity.Door_Server;
 import com.example.gto.m2techgateway.sub_Activity.Lidar_CANFD;
 import com.example.gto.m2techgateway.sub_Activity.Lidar_Server;
+import com.example.gto.m2techgateway.sub_Activity.Temp1_Server;
+import com.example.gto.m2techgateway.sub_Activity.Temp2_Server;
+import com.example.gto.m2techgateway.sub_Activity.Temp3_Server;
 import com.example.gto.m2techgateway.sub_Activity.i2c_temperature_Activity;
 
 import java.io.IOException;
@@ -113,6 +116,26 @@ public class MainActivity extends AppCompatActivity {
     public void onClick_btn4(View v){
         final Intent i = new Intent(this, i2c_temperature_Activity.class);
         startActivityForResult(i, 201);
+
+        new Thread(new Temp1_Server()).start();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+        }
+
+        new Thread(new Temp2_Server()).start();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+        }
+
+        new Thread(new Temp3_Server()).start();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+        }
+
+
     }
 
     public void onClick_btn5(View v){

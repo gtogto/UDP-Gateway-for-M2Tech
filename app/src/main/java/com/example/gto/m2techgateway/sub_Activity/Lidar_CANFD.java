@@ -37,13 +37,7 @@ public class Lidar_CANFD extends AppCompatActivity implements SeekBar.OnSeekBarC
         //dynamicSeekBarView.setSeekBarChangeListener((SeekBar.OnSeekBarChangeListener) this);
         dynamicSeekBarView.setMax(200);
         //dynamicSeekBarView.setProgress(150);
-        /*
-        getLidarValue = lidar_value;
-        dynamicSeekBarView.setProgress(getLidarValue);*/
 
-        /*Intent intent = new Intent(this.getIntent());
-        int inPut = intent.getIntExtra("gto", 1);
-        System.out.println("get value to CANFD : "+ inPut);*/
 
         final Handler handler = new Handler(){
             public void handleMessage(Message msg){
