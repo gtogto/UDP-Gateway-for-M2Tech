@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //new Thread(new Server()).start();
+        new Thread(new Server()).start();
         /* GIve the Server some time for startup */
         /*
         try {
@@ -118,9 +118,11 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(i, 201);
 
         new Thread(new Temp1_Server()).start();
+
         try {
-            Thread.sleep(500);
+            Thread.sleep(400);
         } catch (InterruptedException e) {
+
         }
 
         new Thread(new Temp2_Server()).start();
@@ -131,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
 
         new Thread(new Temp3_Server()).start();
         try {
-            Thread.sleep(500);
+            Thread.sleep(600);
         } catch (InterruptedException e) {
         }
 

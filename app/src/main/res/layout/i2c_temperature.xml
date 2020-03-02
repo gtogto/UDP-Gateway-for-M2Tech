@@ -27,7 +27,7 @@
         android:layout_marginStart="124dp"
         android:layout_marginTop="160dp"
         android:layout_weight="1"
-        app:srcCompat="@drawable/light_blue_hologram" />
+        android:src="@drawable/light_blue_hologram" />
 
     <ImageView
         android:id="@+id/imageView1"
@@ -36,9 +36,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="409dp"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="60dp"
         android:layout_weight="1"
-        app:srcCompat="@drawable/light_blue_hologram_inner" />
+        android:src="@drawable/light_blue_hologram_inner" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -49,7 +49,7 @@
         android:layout_marginStart="966dp"
         android:layout_marginTop="12dp"
         android:layout_weight="1"
-        app:srcCompat="@drawable/blue_circle" />
+        android:src="@drawable/blue_circle" />
 
     <TextView
         android:id="@+id/temp1"

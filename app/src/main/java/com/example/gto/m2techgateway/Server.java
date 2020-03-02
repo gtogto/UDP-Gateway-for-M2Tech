@@ -15,7 +15,7 @@ import static com.example.gto.m2techgateway.MainActivity.activity_STATE;
 public class Server implements Runnable {
 
     public static final String SERVERIP = "127.0.0.1"; // 'Within' the emulator!
-    public int SERVERPORT = 12001;
+    public int SERVERPORT = 13000;
 
     public static final int CANPORT = 12001;
     public static final int CANFDPORT = 12000;
@@ -37,31 +37,24 @@ public class Server implements Runnable {
     public void run() {
         // TODO Auto-generated method stub
         //testStart();
-        try {
-            /* Retrieve the ServerName */
-            InetAddress serverAddr = InetAddress.getByName(SERVERIP);
 
-            Log.d("UDP", "Server: Connecting...");
-            /* Create new UDP-Socket */
-            DatagramSocket socket = new DatagramSocket(SERVERPORT, serverAddr);
+        //try {
+            //InetAddress serverAddr = InetAddress.getByName(SERVERIP);
 
-            //DatagramSocket socket1 = new DatagramSocket(CANPORT, serverAddr);
-            DatagramSocket socket2 = new DatagramSocket(CANFDPORT, serverAddr);         // CANFD / LIDAR
-            DatagramSocket socket3 = new DatagramSocket(TEMPERATURE1, serverAddr);
-            DatagramSocket socket4 = new DatagramSocket(TEMPERATURE2, serverAddr);
-            DatagramSocket socket5 = new DatagramSocket(TEMPERATURE3, serverAddr);
+            //Log.d("UDP", "Server: Connecting...");
+            //DatagramSocket socket = new DatagramSocket(SERVERPORT, serverAddr);
 
             /* By magic we know, how much data will be waiting for us */
-            byte[] buf = new byte[8];
+            //byte[] buf = new byte[4];
             /* Prepare a UDP-Packet that can
              * contain the data we want to receive */
-            DatagramPacket packet = new DatagramPacket(buf, buf.length);
-            Log.d("UDP", "Server: Receiving...");
+            //DatagramPacket packet = new DatagramPacket(buf, buf.length);
+            //Log.d("UDP", "Server: Receiving...");
 
             //System.out.println("START CANFD");
 
-
-            socket.setSoTimeout(500);
+            /*
+            socket.setSoTimeout(200);
             while (packet != null){
                 //Receive the UDP-Packet
                 socket.receive(packet);
@@ -69,6 +62,7 @@ public class Server implements Runnable {
                 Log.d("UDP", "Server: Received: " + new String(packet.getData()));
                 Log.d("UDP", "Server: Done.");
 
+                /*
                 InetAddress clientAddr = packet.getAddress();
                 int clientPort = packet.getPort();
 
@@ -77,14 +71,15 @@ public class Server implements Runnable {
                 packet = new DatagramPacket(buf, buf.length, clientAddr, clientPort);
 
                 Log.d("UDP", "Server: Sending: " + new String(buf) + "'");
-                socket.send(packet);
-            }
+                socket.send(packet);*/
+            //}
 
-        } catch (Exception e) {
-            Log.e("UDP", "Server: Error", e);
-        }
+        //} catch (Exception e) {
+          //  Log.e("UDP", "Server: Error", e);
+       //}
     }
 
+    /*
     public void testStart() {
         timer_sec = 0;
         count = 0;
@@ -107,6 +102,6 @@ public class Server implements Runnable {
             }
         };
         handler.post(updater);
-    }
+    }*/
 
 }
