@@ -14,6 +14,7 @@ public class Temp2_Server implements Runnable{
     private boolean stopFlag = false;
     public static int tempPacket_buf_2;
     public static int temp_value_2;
+    public static float temp_float_2;
 
     public static DatagramSocket socket_TEMP_2;
 
@@ -57,6 +58,9 @@ public class Temp2_Server implements Runnable{
                 float temp_swap_float = Float.intBitsToFloat(temp_swap_long.intValue());
 
                 Log.d("UDP", "TEMP 2 Server: to Change : " + temp_swap_float);
+
+                temp_float_2 = temp_swap_float;
+
 
 
 

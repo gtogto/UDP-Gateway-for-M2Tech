@@ -60,6 +60,8 @@ public class Temp1_Server implements Runnable{
 
                 Log.d("UDP", "TEMP 1 Server: to Change : " + temp_swap_float);
 
+                temp_float_1 = temp_swap_float;
+
 
                 //byte[] temp2 = hexToByteArray(temp11);
 

@@ -51,9 +51,12 @@ public class Door_Server implements Runnable {
     }
 
     public static void byte_to_ascii(byte[] b) {
-
-        for (int i=0; i < b.length; i++){
-            System.out.print((int)b[i] + " ");
+        int val = 0;
+        for (int i=0; i < 4; i++){
+            //System.out.print((int)b[i] + " ");
+            val |= b[i] << (8*(4-i-1));
+            //System.out.print(val & 0xff);
+            doorPacket_buf = val;
         }
         System.out.println();
     }

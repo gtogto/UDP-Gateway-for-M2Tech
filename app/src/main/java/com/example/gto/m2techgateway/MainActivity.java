@@ -13,6 +13,7 @@ import com.example.gto.m2techgateway.sub_Activity.Door_Control;
 import com.example.gto.m2techgateway.sub_Activity.Door_Server;
 import com.example.gto.m2techgateway.sub_Activity.Lidar_CANFD;
 import com.example.gto.m2techgateway.sub_Activity.Lidar_Server;
+import com.example.gto.m2techgateway.sub_Activity.Most_Video_Activity;
 import com.example.gto.m2techgateway.sub_Activity.Temp1_Server;
 import com.example.gto.m2techgateway.sub_Activity.Temp2_Server;
 import com.example.gto.m2techgateway.sub_Activity.Temp3_Server;
@@ -141,7 +142,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick_btn5(View v){
-
+        final Intent i = new Intent(this, Most_Video_Activity.class);
+        startActivityForResult(i, 201);
     }
 
 }

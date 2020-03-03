@@ -14,6 +14,7 @@ public class Temp3_Server implements Runnable{
     private boolean stopFlag = false;
     public static int tempPacket_buf_3;
     public static int temp_value_3;
+    public static float temp_float_3;
 
     public static DatagramSocket socket_TEMP_3;
 
@@ -57,6 +58,9 @@ public class Temp3_Server implements Runnable{
                 float temp_swap_float = Float.intBitsToFloat(temp_swap_long.intValue());
 
                 Log.d("UDP", "TEMP 3 Server: to Change : " + temp_swap_float);
+
+                temp_float_3 = temp_swap_float;
+
 
                 /*
                 byte_to_ascii(packet.getData());

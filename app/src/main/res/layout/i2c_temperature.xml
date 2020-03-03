@@ -7,7 +7,6 @@
     android:background="@color/gray"
     >
 
-
     <ImageView
         android:layout_width="958dp"
         android:layout_height="wrap_content"
@@ -35,15 +34,15 @@
         android:layout_height="270dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="409dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="400dp"
+        android:layout_marginTop="55dp"
         android:layout_weight="1"
         android:src="@drawable/light_blue_hologram_inner" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="257dp"
-        android:layout_height="315dp"
+        android:layout_width="285dp"
+        android:layout_height="337dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="966dp"
@@ -82,9 +81,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="450dp"
+        android:layout_marginStart="430dp"
         android:layout_marginTop="70dp"
-        android:text="00"
+        android:text="00.00"
         android:textSize="50sp"
         android:textStyle="bold" />
 
@@ -107,10 +106,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="1029dp"
-        android:layout_marginTop="133dp"
-        android:text="00"
-        android:textSize="60sp"
+        android:layout_marginStart="1000dp"
+        android:layout_marginTop="150dp"
+        android:text="00.00"
+        android:textSize="50sp"
         android:textStyle="bold" />
 
     <TextView
@@ -120,10 +119,10 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="133dp"
+        android:layout_marginTop="150dp"
         android:layout_toEndOf="@+id/temp3"
         android:text="ºc"
-        android:textSize="60sp"
+        android:textSize="50sp"
         android:textStyle="bold|italic" />
 
 

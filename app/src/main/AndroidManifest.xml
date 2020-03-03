@@ -39,6 +39,10 @@
             android:name=".sub_Activity.i2c_temperature_Activity"
             ></activity>
 
+        <activity
+            android:name=".sub_Activity.Most_Video_Activity"
+            ></activity>
+
     </application>
 
 </manifest>
